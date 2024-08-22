@@ -35,7 +35,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 resource "aws_instance" "aws_ec2_instance" {
   ami = var.ec2_ami_id
   instance_type = var.ec2_instance_type
-  key_name = "tf-mum-temp-ntt"
+  key_name = "mum-temp"
   vpc_security_group_ids = [ aws_security_group.web-app-security-group.id ]
 
   tags = {
